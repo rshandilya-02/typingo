@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Caret from './Caret';
 
-const UserTypings = ({ userInput, className,timer,buttonRef,typedText,setTypedText }: { userInput: string, className?: string,timer:boolean,typedText:string,buttonRef?: React.RefObject<HTMLButtonElement>,  setTypedText: React.Dispatch<React.SetStateAction<string>>
+const UserTypings = ({ userInput, className,timer,buttonRef,typedText,setTypedText }: { userInput: string, className?: string,timer:boolean,typedText:string,buttonRef?: React.RefObject<HTMLButtonElement | null>,  setTypedText: React.Dispatch<React.SetStateAction<string>>
  }) => {
 
     // const letterStore = useRef('');
@@ -30,7 +30,7 @@ const UserTypings = ({ userInput, className,timer,buttonRef,typedText,setTypedTe
 
     useEffect(() => {
         if (!timer) return;
-        buttonRef?.current.blur();
+        buttonRef?.current?.blur();
         window.addEventListener('keydown', handleKeyDown);
 
         return (() => window.removeEventListener('keydown', handleKeyDown));
