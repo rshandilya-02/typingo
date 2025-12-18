@@ -1,11 +1,20 @@
-import React from 'react'
+'use client'
 
-const CountDownTimer = ({timeLeft}:{timeLeft:number}) => {
+import React, { useEffect, useState } from 'react'
+
+const CountDownTimer = ({ timeLeft }: { timeLeft: number }) => {
+  
+  useEffect(() => {
+    setInterval(() => {
+      
+    })
+  },[])
   return (
-      <div>
+    <div>
           Time Left : {
               JSON.stringify(timeLeft)
-          }</div>
+      }
+    </div>
   )
 }
 
