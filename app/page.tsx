@@ -7,7 +7,7 @@ import HandleRestart from '../components/HandleRestart'
 import Results from '../components/Results'
 import UserTypings from '@/components/UserTypings'
 
-const TEST_DURATION = 10
+const TEST_DURATION = 45
 
 const Home = () => {
   const buttonRef = useRef<HTMLButtonElement>(null)
